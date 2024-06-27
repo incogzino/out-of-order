@@ -30,6 +30,7 @@ async function App({ params }: ReviewPageProps) {
         <div className="review-card-container">
 
             <div className="card">
+                
                 <span>{review.customer}</span>
                 <br />
                 <span>{review.productName}</span>

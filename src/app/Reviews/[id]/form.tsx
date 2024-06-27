@@ -1,6 +1,7 @@
 "use client"
 import { createReview } from "@/app/NewReview/[id]/addReviewsApi";
 import { useState } from "react";
+import { ReviewData } from "./getReviewsApi";
 export default function Form({ productId }: { productId: string }) {
 
     const [customer, setCustomer] = useState<string>("");
@@ -11,11 +12,21 @@ export default function Form({ productId }: { productId: string }) {
     }
 
     return (
-        <form>
-        <input type="text" id="customer" onChange={(e) => setCustomer(e.target.value)}/>
-        <input type="text" id="comment" onChange={(e) => setComment(e.target.value)}/>
-        <button onClick={createHandler}> </button>
-        </form>
+        <div className="review-card-container">
+
+            <div className="card">
+            <img src={review.image} /> 
+              <form>
+                <span>Name:</span>
+                <input type="text" id="customer" onChange={(e) => setCustomer(e.target.value)}/>
+                <br />
+                <span>Product review:</span>
+                <input type="text" id="comment" onChange={(e) => setComment(e.target.value)}/>
+                <button onClick={createHandler}> </button>
+                </form>      
+            </div>
+     </div>
+        
         
     )
 }

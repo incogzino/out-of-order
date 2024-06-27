@@ -126,7 +126,7 @@ a {
 
 .product-card-container {
 
-  display: flex;
+  display: f;
   flex-wrap: wrap;
   min-width: 80;
   justify-content: space-between; /* This distributes the cards evenly in a row */

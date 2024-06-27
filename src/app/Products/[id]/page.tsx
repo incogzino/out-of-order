@@ -24,11 +24,7 @@ async function App({ params }: ProductPageProps) {
     const product = await getProduct(params.id)
     console.log(product)
 
-    // dayjs.extend(relativeTime);
-    // dayjs.locale("en");
-    //         <span>
-    //           {dayjs(releaseDate.timestamp).fromNow()}
-    //         </span>
+    
     {/* Product card */ }
 
 
@@ -43,7 +39,7 @@ async function App({ params }: ProductPageProps) {
                 <br />
                 <span>Price: £{product.price}</span>
                 <br />
-                <Link href={`/Checkout`}>
+                <Link href={`/Checkout/${id}`}>
                 <button className={styles.button56} role="button">
                     Buy Now 
                 </button>
@@ -66,10 +62,7 @@ async function App({ params }: ProductPageProps) {
                             <td>Release Date:</td>
                             <td>{product.releaseDate}</td>
                         </tr>
-                        <tr>
-                            <td>Availability:</td>
-                            <td>{product.Available}</td>
-                        </tr>
+                        
                         <tr>
                             <Link href={`/Reviews/${product.productId}`}>
                             <h3 className='review-link'style={{ textDecoration: "none!important" }}></h3>

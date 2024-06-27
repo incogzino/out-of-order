@@ -1,12 +1,14 @@
 services:
   frontend:
-    image: ghcr.io/incogzino/build-frontend:latest #change this
+    # image: ghcr.io/incogzino/build-frontend:latest #change this
+    build: .
     ports:
       - "3000:3000"
     container_name: frontend
   
   backend:
-    image: ghcr.io/incogzino/build-backend:latest #change this
+    # image: ghcr.io/incogzino/build-backend:latest #change this
+    build: ../express
     ports:
       - "8080:8080" # change this
     container_name: backend
