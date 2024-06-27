@@ -14,8 +14,7 @@ export default function Form({ productId }: { productId: string }) {
     return (
         <div className="review-card-container">
 
-            <div className="card">
-            <img src={review.image} /> 
+            <div className="card"> 
               <form>
                 <span>Name:</span>
                 <input type="text" id="customer" onChange={(e) => setCustomer(e.target.value)}/>
